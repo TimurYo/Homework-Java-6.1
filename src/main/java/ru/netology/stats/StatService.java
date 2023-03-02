@@ -11,11 +11,9 @@ public class StatService {
     }
 
     public int getAverageOfSales(long[] sales) {
-        int sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
-        }
-        int average = sum / sales.length;
+        int x = (int) getSumOfSales(sales); //переменная суммы из метода getSumOfSales
+
+        int average = x / sales.length;
         return average;
     }
 
@@ -48,16 +46,11 @@ public class StatService {
     }
 
     public int getAmountOfMonthWithLowSales(long[] sales) {
-        int sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
-        }
-
-        int average = sum / sales.length;
+        int y = (int) getAverageOfSales(sales); //переменная суммы из метода getAverageOfSales
 
         int monthWithLowSales = 0;
         for (long sale : sales) {
-            if (sale <= average) {
+            if (sale <= y) {
                 monthWithLowSales++;
             }
         }
@@ -66,16 +59,11 @@ public class StatService {
     }
 
     public int getAmountOfMonthWithHighSales(long[] sales) {
-        int sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
-        }
-
-        int average = sum / sales.length;
+        int y = (int) getAverageOfSales(sales); //переменная суммы из метода getAverageOfSales
 
         int monthWithHighSales = 0;
         for (long sale : sales) {
-            if (sale >= average) {
+            if (sale >= y) {
                 monthWithHighSales++;
             }
         }
