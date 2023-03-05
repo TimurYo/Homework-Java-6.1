@@ -9,22 +9,22 @@ public class Main {
         long[] sales = {
                 10, 2, 13, 18, 22, 1, 3, 4, 60000, 100
         };
-        int amountOfSales = (int) service.getSumOfSales(sales);
+        long amountOfSales = service.getSumOfSales(sales);
         System.out.println(amountOfSales + " - сумма всех продаж");
 
-        int averageOfSales = (int) service.getAverageOfSales(sales);
+        long averageOfSales = service.getAverageOfSales(sales);
         System.out.println(averageOfSales + " - среднее арифметическое всех продаж");
 
-        int max = (int) service.getMaxAmountOfSales(sales);
+        long max = service.getMaxAmountOfSales(sales);
         System.out.println(max + " - порядковый номер месяца с наибольшим количеством продаж");
 
-        int min = (int) service.getMinAmountOfSales(sales);
+        long min = service.getMinAmountOfSales(sales);
         System.out.println(min + " - порядковый номер месяца с наименьшим количеством продаж");
 
-        int monthLowSales = (int) service.getAmountOfMonthWithLowSales(sales);
+        long monthLowSales = service.getAmountOfMonthWithLowSales(sales);
         System.out.println(monthLowSales + " - количество месяцев с продажами ниже среднего");
 
-        int monthHighSales = (int) service.getAmountOfMonthWithHighSales(sales);
+        long monthHighSales = service.getAmountOfMonthWithHighSales(sales);
         System.out.println(monthHighSales + "- количество месяцев с продажами выше среднего");
 
     }
